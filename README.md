@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  (https://afends.com/)
+  (https://www.twix.com/)
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Home page 
-  <img src="images/homepage.ss.png" width="375px" alt="homepage screenshot">
+  <img src="images/homepage.png" width="375px" alt="homepage screenshot">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   sustainable page 
-  <img src="images/sustainpage.ss.png" width="375px" alt="sustainablepage screenshot">
+  <img src="images/recipies.png" width="375px" alt="recipies screenshot">
  
 </details>
 
