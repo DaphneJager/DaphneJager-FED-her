@@ -57,6 +57,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  - de website is redelijk toegankelijk voor de screenreader. Alleen zijn er op de home pagina een aantal
+  foto's waarbij er geen beschrijving in zit. 
+  Ook kunnen een paar knoppen een betere beschrijving krijgen
+  dan alleen "see more" of "see details" of "DISCOVER"
+  Ook gaat het in het headings menu van H4 naar H2 en dan weer terug naar H4. er is ook 
+  geen H3, die wordt dus over geslagen.
+  Er staat text in plaatjes, in plaats van text op plaatjes. hierdoor kan de screenreader
+  de text op de foto niet lezen.
+  <img src="images/headings.HEIC" width="375px" alt="headings">
+  <img src="images/links.1.HEIC" width="375px" alt="links">
+  <img src="images/links.2.HEIC" width="375px" alt="links">
 
 </details>
 
