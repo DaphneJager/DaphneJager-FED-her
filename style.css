@@ -1,0 +1,64 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+
+@font-face {
+	font-family:;
+	src: url(https://www.twix.com/sites/g/files/fnmzdf236/files/GoForGoldText.woff);
+}
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	color-scheme: light dark;
+
+	--color-text:#490F00;
+	--color-nav-gradient: #E69D31;
+	--color-nav-gradient-top: #EFC16D;
+}
+
+header{
+	background: linear-gradient(
+			to right,
+			var(--color-nav-gradient),
+			var(--color-nav-gradient-top),
+			var(--color-nav-gradient)
+			);
+
+}
+
+header img{
+	height: 10em;
+	width: 10em;
+}
+
+header nav ul li a{
+	list-style: none;
+	text-decoration: none;
+	color: var(--color-text);
+
+}
+
+body {
+	display: grid;
+	grid-column: row;
+	
+}
+
+
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+/* jouw code */
+
