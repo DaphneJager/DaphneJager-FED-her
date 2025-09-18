@@ -40,11 +40,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Home page 
-  <img src="images/homepage.png" width="375px" alt="homepage screenshot">
+  <img src="../basiswebsite/images/homepage.png" width="375px" alt="homepage screenshot">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   sustainable page 
-  <img src="images/recipies.png" width="375px" alt="recipies screenshot">
+  <img src="../basiswebsite/images/recipies.png" width="375px" alt="recipies screenshot">
  
 </details>
 
@@ -105,12 +105,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Daphne  
+    Hoe moet ik werken met foto's met tekst (moet ik dat weg-editen?).
+    En hoe ik mijn font moet dowloaden, want dit lukt niet.
 
+  | Anouk
+
+  | Leon
+
+  | Tobias
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
