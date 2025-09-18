@@ -79,13 +79,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdown.p1.png.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/breakdown.p2.png.jpg" width="375px" alt="pagina 2">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/breakdown.mn.png.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
 </details>
 
@@ -110,10 +110,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
     En hoe ik mijn font moet dowloaden, want dit lukt niet.
 
   | Anouk
+  Font inladen en carousel maken
 
   | Leon
+    Hoe kan ik forms goed uitwerken, zoals een email input field
+    Navigatie bar die zelf links heeft, met extra links er onder. Links kunnen alleen niet in links zitten. Hoe moet dit opgelost worden?
+    Verder had ik 2 korte vraagjes over headers en of daar per se een tekst onder moet staan en hoe het ook alweer zat met SVG bestanden.
 
   | Tobias
+  een bepaald hover effect in een <UL> maken
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
@@ -243,7 +248,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
+  1. [a11y project, hide content](https://www.a11yproject.com/posts/how-to-hide-content/)
   2. bron 2
   3. ...
 
