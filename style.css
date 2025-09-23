@@ -52,6 +52,16 @@ body {
 	
 }
 
+ul {
+	display: flex;
+	overflow: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior-x: contain;
+	scrollbar-width: thin;
+	scrollbar-color: black;
+}
+
 
 
 
