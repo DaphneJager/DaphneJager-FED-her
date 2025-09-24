@@ -24,7 +24,11 @@
 	--color-nav-gradient-top: #EFC16D;
 }
 
+/* header */
 header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	background: linear-gradient(
 			to right,
 			var(--color-nav-gradient),
@@ -46,13 +50,31 @@ header nav ul li a{
 
 }
 
+/* nav */
+nav {
+	order: -10;
+}
+
+nav button {
+	z-index: 1;
+	position: fixed;
+}
+
+nav ul{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
 body {
 	display: grid;
 	grid-column: row;
 	
 }
 
-ul {
+main ul {
 	display: flex;
 	overflow: auto;
 	scroll-snap-type: x mandatory;
@@ -62,7 +84,7 @@ ul {
 	scrollbar-color: black;
 }
 
-ul li {
+main ul li {
 	flex-basis:100%;
   	flex-shrink: 0;
   	scroll-snap-align: center;
