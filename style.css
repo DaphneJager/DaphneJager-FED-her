@@ -55,11 +55,6 @@ nav {
 	order: -10;
 }
 
-nav button {
-	z-index: 1;
-	position: fixed;
-}
-
 nav ul{
 	position: fixed;
 	top: 0;
@@ -68,11 +63,60 @@ nav ul{
 	right: 0;
 }
 
-body {
+/* nav button */
+nav button {
+	z-index: 1;
+	position: fixed;
+	appearance: none;
+  	font-size: 1em;
+  	width: 3em;
+  	aspect-ratio: 1;
+  	border: none;
+  	background-color: red;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+}
+
+nav button span{
+  display: block;
+  width: 1.5em;
+  height: .2em;
+  background-color: var(--color-text);
+  border-radius: .1em;
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+nav button span:nth-of-type(1){
+  translate: 0 -.5em;
+}
+
+nav button span:nth-of-type(3){
+  translate: 0 .5em;
+}
+
+nav button.is-open span:nth-of-type(1){
+  translate: 0 0;
+  rotate: 45deg;
+}
+
+nav button.is-open span:nth-of-type(2){
+  scale: 0 1;
+}
+
+nav button.is-open span:nth-of-type(3){
+  translate: 0 0;
+  rotate: -45deg;
+}
+
+
+
+/* body {
 	display: grid;
 	grid-column: row;
 	
-}
+} */
 
 main ul {
 	display: flex;
