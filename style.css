@@ -112,13 +112,18 @@ nav button.is-open span:nth-of-type(3){
 
 
 
-/* body {
+body {
 	display: grid;
 	grid-column: row;
 	
-} */
+}
 
-main ul {
+main section:nth-of-type(2) {
+	display: flex;
+	overflow: auto;
+}
+
+main section:nth-of-type(2) ul {
 	display: flex;
 	overflow: auto;
 	scroll-snap-type: x mandatory;
@@ -126,9 +131,10 @@ main ul {
 	overscroll-behavior-x: contain;
 	scrollbar-width: thin;
 	scrollbar-color: black;
+	scrollbar-color:#f09 transparent;
 }
 
-main ul li {
+main section:nth-of-type(2) ul li {
 	flex-basis:100%;
   	flex-shrink: 0;
   	scroll-snap-align: center;
@@ -136,11 +142,4 @@ main ul li {
 
 
 
-
-
-/****************/
-/* JOUW STYLING */
-/****************/
-
-/* jouw code */
 
