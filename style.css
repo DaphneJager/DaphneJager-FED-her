@@ -22,6 +22,7 @@
 	--color-text:#490F00;
 	--color-nav-gradient: #E69D31;
 	--color-nav-gradient-top: #EFC16D;
+	--color-buttons: #E62B1E;
 }
 
 /* header */
@@ -72,7 +73,7 @@ nav button {
   	width: 3em;
   	aspect-ratio: 1;
   	border: none;
-  	background-color: red;
+  	background-color: var(--color-buttons);
 	display: grid;
 	justify-content: center;
 	align-content: center;
@@ -142,4 +143,17 @@ main section:nth-of-type(2) ul li {
 
 
 
+/* ------------------------------------ */
+/* RECIPIES PAGINA */
+/* ------------------------------------ */
 
+/* #recipies {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	font-size: 1em;
+}
+
+#recipies h1 {
+	font-size: 1em;
+} */
