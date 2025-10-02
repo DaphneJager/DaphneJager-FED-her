@@ -1,0 +1,47 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+  margin: 0;
+  padding: 0;
+}
+
+
+@font-face {
+	font-family: 'twix';
+	src: url('../font/GoforGoldDisplayCompressed.woff') format('woff');
+	src: url('../font/GoforGoldDisplayCondensed.woff') format('woff2');
+	src: url('../font/GoForGoldText.woff') format('woff3');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* MAIN */
+
+main {
+    background-color: var(--background-section);
+}
+
+
+/* Recept dingen */
+article {
+    background: linear-gradient(
+			to right,
+			var(--background-header-dark),
+			var(--background-header-light),
+			var(--background-header-dark)
+			);
+    padding: 2em;
+    margin: 2em;
+    border-radius: 3%;
+    color: var(--color-text-dark);
+}
+
+table {
+
+}
+
+th, td {
+    padding: 1em;
+}

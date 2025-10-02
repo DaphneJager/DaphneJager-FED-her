@@ -123,9 +123,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - github desktop downloaden
+  - code is goed in orde verder
+  - hamburger menu maken
   - ...
 
 </details>
@@ -140,17 +140,26 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Had even error met github maar dat is weer opgelost:) hamburger menu werkt nu!
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Daphne      
+  hoe los ik het probleem met mijn carrousel op?
+  hoe moet ik werken met bepaalde foto’s waar text op staat?
+
+  | Anouk
+  hoe kan ik mijn menu verbergen in een hamburger menu?
+  hoe maak ik mijn carousel werkend 
+
+  | Leon
+    Hoe werk ik met een SVG Logo?
+    Veel verschillende styling voor headers en andere elementen, hoe opstellen in style sheet zonder classes en heel veel uitzonderingen maken.
+
+  | Tobias
+  -
 
 
   ### Verslag van meeting

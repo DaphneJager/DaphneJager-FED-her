@@ -9,8 +9,12 @@
 
 
 @font-face {
-	font-family:;
-	src: url(https://www.twix.com/sites/g/files/fnmzdf236/files/GoForGoldText.woff);
+	font-family: 'twix';
+	src: url('../font/GoforGoldDisplayCompressed.woff') format('woff');
+	src: url('../font/GoforGoldDisplayCondensed.woff') format('woff2');
+	src: url('../font/GoForGoldText.woff') format('woff3');
+	font-weight: normal;
+	font-style: normal;
 }
 
 .visually-hidden {
@@ -34,7 +38,7 @@
 	--background-header-dark: #E69D31;
 	--background-header-light: #EFC16D;
 	--background-main: #490f00;
-	--background-section: #ffff;
+	--background-section: #FFF0EB;
 	--button-color: #E62B1E;
 }
 
@@ -42,10 +46,16 @@
 /* JOUW STYLING */
 /****************/
 
+/* FONTS */
+h1, h2, h3, h4, p, a {
+	font-family: 'twix', Arial, Helvetica, sans-serif;
+}
+
 
 /*HEADER*/
 header{
 	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 	background: linear-gradient(
@@ -58,8 +68,9 @@ header{
 }
 
 header img{
-	height: 10em;
-	width: 10em;
+	height: 5.5em;
+	width: 5.5em;
+	margin: 1em;
 }
 
 
@@ -80,19 +91,46 @@ header nav ul li a{
 nav {
 	display: flex;
 	justify-content: center;
+	position: relative;
+	flex-direction: column;
 }
 
 nav ul{
-	top: 0;
+	display: block;
+	position: fixed;
+	top: 5em;
 	bottom: 0;
 	left: 0;
 	right: 0;
+	background: linear-gradient(
+			to right,
+			var(--background-header-dark),
+			var(--background-header-light),
+			var(--background-header-dark)
+			);
+	translate: -100%;
+	transition: 1s
 }
 
-/* nav button */
+nav ul li{
+	padding: 1em;
+}
+
+nav ul li a{
+	font-size: 2em;
+}
+
+nav.is-open ul {
+  translate: 0%;
+  transition: 1s;
+}
+
+/* nav button bron: Sanne in de les */
 nav button {
 	z-index: 1;
-	position: fixed;
+	position: relative;
+	top: .15em;
+	right: 1em;
 	appearance: none;
   	font-size: 1em;
   	width: 3em;
@@ -103,6 +141,8 @@ nav button {
 	justify-content: end;
 	align-content: center;
 }
+
+
 
 nav button span{
   display: block;
@@ -136,76 +176,29 @@ nav button.is-open span:nth-of-type(3){
   rotate: -45deg;
 }
 
-/*MAIN*/
-main{
-	background-color: var(--background-main);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	align-content: center;
-	color: var(--color-text-dark);
+
+
+/* FOOTER */
+
+footer img {
+	width: 5em;
+	height: 5em;
 }
 
-
-main h2{
-	font-size: small;
+footer section:nth-of-type(1) {
+	background: linear-gradient(
+			to right,
+			var(--background-header-dark),
+			var(--background-header-light),
+			var(--background-header-dark)
+			);
+	
 }
 
-main p{
-	font-size: 3em;
-}
-
-main img{
-	width: fit-content;
-	height: auto;
-}
-
-main section{
-	background-color: var(--background-section);
-}
-
-main :nth-child(3){
-	display: flex;
-	flex-direction: column;
-	justify-content: left;
-	padding: 2em;
-	background-color: var(--background-main);
-	color: var(--color-text-light);
-}
-
-main button{
+footer section:nth-of-type(2) {
 	background-color: var(--button-color);
-	border: solid;
-	border-color: var(--button-color);
-	padding: .5em 1.5em .5em 1.5em;
-	position: center;
-	border-radius: .5em;
 }
 
-main section:nth-of-type(2) {
-	display: flex;
-	overflow: auto;
+footer section:nth-of-type(3) {
+	background-color: var(--button-color);
 }
-
-main section:nth-of-type(2) ul {
-	display: flex;
-	overflow: auto;
-	scroll-snap-type: x mandatory;
-	scroll-behavior: smooth;
-	overscroll-behavior-x: contain;
-	scrollbar-width: thin;
-	scrollbar-color: black;
-	scrollbar-color:#f09 transparent;
-}
-
-main section:nth-of-type(2) ul li {
-	flex-basis:100%;
-  	flex-shrink: 0;
-  	scroll-snap-align: center;
-}
-
-
-
-
