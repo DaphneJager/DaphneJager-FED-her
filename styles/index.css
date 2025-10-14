@@ -1,86 +1,27 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
-  margin: 0;
-  padding: 0;
-}
-
-
-@font-face {
-	font-family: 'twix';
-	src: url('../font/GoforGoldDisplayCompressed.woff') format('woff');
-	src: url('../font/GoforGoldDisplayCondensed.woff') format('woff2');
-	src: url('../font/GoForGoldText.woff') format('woff3');
-	font-weight: normal;
-	font-style: normal;
-}
-
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
 
 /*MAIN*/
 main{
 	background-color: var(--background-main);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	align-content: center;
 	color: var(--color-text-dark);
 }
 
 
 main h2{
 	font-size: small;
+    text-align: center;
 }
 
-main p{
-	font-size: 3em;
-}
 
-main img{
-	width: fit-content;
-	height: auto;
-}
 
 main section{
 	background-color: var(--background-section);
 }
 
-main :nth-child(3){
-	display: flex;
-	flex-direction: column;
-	justify-content: left;
-	padding: 2em;
-	background-color: var(--background-main);
-	color: var(--color-text-light);
-}
-
-main button{
-	background-color: var(--button-color);
-	border: solid;
-	border-color: var(--button-color);
-	padding: .5em 1.5em .5em 1.5em;
-	position: center;
-	border-radius: .5em;
-}
-
-/* carousel bron: carousel oefening les */
-
-main section:nth-of-type(2) {
-	display: flex;
-	overflow: auto;
-}
+/* CAROUSEL 
+bron: carousel oefening les */
 
 main section:nth-of-type(2) ul {
 	display: flex;
@@ -91,6 +32,7 @@ main section:nth-of-type(2) ul {
 	scrollbar-width: thin;
 	scrollbar-color: black;
 	scrollbar-color:#f09 transparent;
+    list-style-type: "";
 }
 
 main section:nth-of-type(2) ul li {
@@ -98,3 +40,87 @@ main section:nth-of-type(2) ul li {
   	flex-shrink: 0;
   	scroll-snap-align: center;
 }
+
+main section:nth-of-type(2) ul li img {
+	width: 100%;
+    height: 100%;
+}
+
+/* SECTIE DONKERE ACHTERGROND */
+main section:nth-child(3) {
+    background-color: var(--background-main);
+}
+
+main section:nth-child(3) p {
+    color: var(--color-text-light);
+    padding: 1em;
+    font-size: 2em;
+}
+
+main section:nth-child(3) img{
+    padding: 3em;
+    max-width: 100%;
+}
+
+/* button sectie donkere achtergrond */
+main section:nth-child(3) button{
+	background-color: var(--button-color);
+	border: none;
+	padding: 1em 1.5em 1em 1.5em;
+	border-radius: .5em;
+    width: 10em;
+    margin: 2em;
+    color: var(--color-text-light);
+}
+
+/* SECTIE LICHTE ACHTERGROND */
+main section:nth-child(4) h2 {
+    font-family: 'twix compressed', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 3em;
+}
+
+main section:nth-child(4) li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section:nth-child(4) li img {
+    width: 80%;
+    transition: 1s;
+    order: -10;
+}
+
+
+main section:nth-child(4) li img:hover {
+    scale: 1.1;
+    transition: 1s;
+}
+
+main section:nth-child(4) li h3 {
+    font-size: 2em;
+}
+
+/* buttons sectie lichter achtergrond */
+
+main section:nth-child(4) li button{
+	background-color: var(--button-color);
+	border: none;
+	padding: 1em 1.5em 1em 1.5em;
+	border-radius: .5em;
+    width: 10em;
+    margin: 2em;
+    color: var(--color-text-light);
+}
+
+
+
+
+/* FOTO BANNER */
+main section:nth-of-type(5) img {
+    width: 100%;
+}
+
+

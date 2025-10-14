@@ -258,7 +258,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. Vermeld de bronnen ook in je code.
 
   1. [a11y project, hide content](https://www.a11yproject.com/posts/how-to-hide-content/)
-  2. bron 2
-  3. ...
+  2. [bron foto missende twix caramel](https://www.tastysnack.asia/products/twix-caramel-milk-chocolate-cookie-bars-50-7g-36-carton)
+  3. [w3schools](https://www.w3schools.com/)
+  4. 
 
 </details>
