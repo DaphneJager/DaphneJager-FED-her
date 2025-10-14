@@ -1,0 +1,345 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+  margin: 0;
+  padding: 0;
+}
+
+
+@font-face {
+	font-family: 'twix';
+	src: url('../font/GoForGoldText.woff') format('woff');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'twix';
+	src: url('../font/GoforGoldDisplayCondensed.woff') format('woff');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'twix compressed';
+	src: url('../font/GoforGoldDisplayCompressed.woff') format('woff');
+	font-weight: 400;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	color-scheme: light dark;
+
+	--color-text-dark:#490F00;
+	--color-text-light: #ffff;
+	--background-header-dark: #E69D31;
+	--background-header-light: #EFC16D;
+	--background-recipies: #EAAC00;
+	--background-main: #490f00;
+	--background-section: #FFF0EB;
+	--button-color: #E62B1E;
+	
+	--background-darkmode-header: #490F00;
+	--background-darkmode-header2: #6d1a06;
+
+	--background-header-gradient:
+		linear-gradient(
+			to right,
+			var(--background-header-dark),
+			var(--background-header-light),
+			var(--background-header-dark)
+		);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-header-gradient:
+			linear-gradient(
+				to right,
+				var(--background-darkmode-header),
+				var(--background-darkmode-header2),
+				var(--background-darkmode-header)
+			);
+	}
+	
+}
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+/* FONTS */
+h1, h2, h3, h4, p, a, table {
+	font-family: 'twix', Arial, Helvetica, sans-serif;
+	font-weight: 700;
+}
+
+/* ALGEMEEN */
+button {
+	appearance: none;
+	font-family: 'twix', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	transition: 1s;
+}
+
+button:hover {
+	cursor: pointer;	
+}
+
+/*HEADER*/
+header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background: var(--background-header-gradient);
+	height: 5em;
+}
+
+header img{
+	height: 5.5em;
+	width: 5.5em;
+	margin: 1em;
+}
+
+
+header nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+header nav ul li a{
+	color: var(--color-text-dark);
+	text-decoration: none;
+	list-style: none;
+}
+
+/* NAV */
+
+nav {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	flex-direction: column;
+}
+
+nav ul{
+	display: block;
+	position: fixed;
+	top: 5em;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(
+			to right,
+			var(--background-header-dark),
+			var(--background-header-light),
+			var(--background-header-dark)
+			);
+	translate: -100%;
+	transition: 1s
+}
+
+nav ul li{
+	padding: 1em;
+}
+
+nav ul li a{
+	font-size: 2em;
+}
+
+nav.is-open ul {
+  translate: 0%;
+  transition: 1s;
+}
+
+/* nav button bron: Sanne in de les */
+nav button {
+	z-index: 1;
+	position: relative;
+	top: .15em;
+	right: 1em;
+	appearance: none;
+  	font-size: 1em;
+  	width: 3em;
+  	aspect-ratio: 1;
+  	border: none;
+  	background: none;
+	display: grid;
+	justify-content: end;
+	align-content: center;
+}
+
+
+
+nav button span{
+  display: block;
+  width: 1.5em;
+  height: .2em;
+  background-color: var(--button-color);
+  border-radius: .1em;
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+nav button span:nth-of-type(1){
+  translate: 0 -.5em;
+}
+
+nav button span:nth-of-type(3){
+  translate: 0 .5em;
+}
+
+nav button.is-open span:nth-of-type(1){
+  translate: 0 0;
+  rotate: 45deg;
+}
+
+nav button.is-open span:nth-of-type(2){
+  scale: 0 1;
+}
+
+nav button.is-open span:nth-of-type(3){
+  translate: 0 0;
+  rotate: -45deg;
+}
+
+
+
+/* FOOTER */
+
+/* footer {
+	padding: 1em;
+} */
+
+/* footer li a{
+	color: var(--color-text-light);
+	text-decoration: none;
+	display: flex;
+} */
+
+footer li {
+	margin-top: .5em;
+	padding: 1em;
+	list-style-type: none;
+}
+
+footer p{
+	font-weight: 100;
+	margin: 1em;
+}
+
+footer img {
+	width: 5em;
+	height: 5em;
+	margin: 1em 1em 0;
+}
+
+footer h2 {
+	font-size: large;
+	padding: 1em;
+}
+
+/* select region button */
+footer section section:nth-of-type(2) button {
+	background-color: var(--color-text-light);
+	margin: 1em;
+	border: none;
+	width: 90%;
+	height: 4em;
+	border-radius: .5em;
+	text-align: left;
+	padding-left: 1.2em;
+	font-weight: 100;
+	font-size: 1em;
+}
+
+footer > section:nth-of-type(1) {
+	background: linear-gradient(
+			to right,
+			var(--background-header-dark),
+			var(--background-header-light),
+			var(--background-header-dark)
+			);
+	color: var(--color-text-dark);
+}
+
+footer > section:nth-of-type(1) a {
+	color: var(--color-text-dark);
+	text-decoration: none;
+	padding: 0 1em 1em 0;
+}
+
+footer > section:nth-of-type(1) li {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+footer > section:nth-of-type(1) a:hover {
+	color: var(--button-color);
+}
+
+footer section:nth-of-type(2) {
+	background-color: var(--button-color);
+	color: var(--color-text-light);
+}
+
+footer section:nth-of-type(2) a {
+	background-color: var(--button-color);
+	color: var(--color-text-light);
+	text-decoration: none;
+}
+
+footer section:nth-of-type(3) {
+	background-color: var(--button-color);
+}
+
+/* Lijst socials */
+footer section section:nth-of-type(1) {
+	color: var(--color-text-light);
+}
+
+footer section section:nth-of-type(1) li a {
+	font-size: .8em;
+
+}
+
+/* Lijst legal links */
+footer section section:nth-of-type(2) li a {
+	font-weight: 100;
+}
+
+footer section section:nth-of-type(2) ul {
+	font-weight: 100;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+
+/* Button onderaan */
+
+footer section section:nth-of-type(3) button {
+	background-color: var(--button-color);
+	margin: 1em;
+	border: solid .2em;
+	border-color: var(--color-text-light);
+	height: 4em;
+	padding: .8em 2.5em .8em 2.5em;
+	border-radius: .5em;
+	font-size: 1em;
+	color: var(--color-text-light);
+}

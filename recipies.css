@@ -1,0 +1,163 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+/* *, *::after, *::before {
+  box-sizing:border-box;  
+  margin: 0;
+  padding: 0;
+} */
+
+
+/* @font-face {
+	font-family: 'twix';
+	src: url('../font/GoforGoldDisplayCompressed.woff') format('woff');
+	src: url('../font/GoforGoldDisplayCondensed.woff') format('woff2');
+	src: url('../font/GoForGoldText.woff') format('woff3');
+	font-weight: normal;
+	font-style: normal;
+} */
+
+/* MAIN */
+
+main {
+    background-color: var(--background-section);
+}
+
+main h1 {
+    font-size: 1em;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    justify-self: center;
+    padding-top: 2em;
+}
+
+main section:first-of-type h2 {
+    
+    text-align: center;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    justify-self: center;
+    padding-top: 1em;
+    
+}
+
+main section:first-of-type p {
+    text-align: center;
+    grid-row-start: 4;
+    grid-column-start: 1;
+    padding: 1em;
+}
+
+main section:first-of-type {
+    background-color: var(--background-recipies);
+    display: grid;
+    grid-template-rows: min-content 1fr max-content;
+    color: var(--color-text-dark);
+}
+
+
+main section:first-of-type img {
+    order: -10;
+    min-width: 100%;
+    height: auto;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+}
+
+/* Recept dingen */
+main section:nth-of-type(2) {
+    color: var(--color-text-dark);
+    display: grid;
+    justify-content: center;
+}
+
+main section:nth-of-type(2) h2 {
+    color: var(--color-text-dark);
+    text-align: center;
+    padding: 1em;
+}
+
+main section:nth-of-type(2) button {
+    background: var(--button-color);
+    color: var(--color-text-light);
+    border: none;
+    padding: 1em;
+    border-radius: .5em;
+}
+
+main section:nth-of-type(2) > button {
+    background: var(--button-color);
+    color: var(--color-text-light);
+    border: none;
+    padding: 1em;
+    margin: 0 1em 2em 1em;
+    border-radius: .5em;
+    width: 35%;
+    justify-self: center;
+
+}
+
+
+article {
+    text-align: left;
+    display: grid;
+    grid-template-rows: max-content max-content 5em max-content;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    background: linear-gradient(
+			to right,
+			var(--background-header-dark),
+			var(--background-header-light),
+			var(--background-header-dark)
+			);
+
+    margin: 2em;
+    border-radius: .5em;
+    color: var(--color-text-dark);
+    width: 20em;
+}
+
+article img {
+    border-radius: .5em .5em 0 0;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+}
+
+article h2 {
+    align-self: left;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 1em 1em 0 1em;
+}
+
+article table {
+    align-self: center;
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 2em;
+}
+
+article button {
+    grid-row-start: 4;
+    margin: 2em;
+}
+
+article button:hover {
+    background: var(--color-text-light);
+    color: var(--button-color);
+}
+
+th {
+   font-weight: 400; 
+
+}
+
+td {
+   font-weight: 700; 
+
+}
