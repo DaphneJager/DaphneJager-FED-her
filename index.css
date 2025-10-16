@@ -5,13 +5,20 @@
 /*MAIN*/
 main{
 	background-color: var(--background-main);
-	color: var(--color-text-dark);
 }
 
 
 main h2{
-	font-size: small;
     text-align: center;
+    color: var(--color-text-dark);
+}
+
+main section:nth-of-type(3) h2{
+    color: var(--color-text-light);
+}
+
+main h3{
+    color: var(--color-text-dark);
 }
 
 
@@ -30,8 +37,7 @@ main section:nth-of-type(2) ul {
 	scroll-behavior: smooth;
 	overscroll-behavior-x: contain;
 	scrollbar-width: thin;
-	scrollbar-color: black;
-	scrollbar-color:#f09 transparent;
+	scrollbar-color:var(--button-color);
     list-style-type: "";
 }
 
@@ -44,7 +50,45 @@ main section:nth-of-type(2) ul li {
 main section:nth-of-type(2) ul li img {
 	width: 100%;
     height: 100%;
+    object-fit: cover;
 }
+
+/* bolletjes. Brond: lesopdracht caroussel */
+
+@media (width > 10em) {
+  ul {
+    /* geen scrollbar */
+    scrollbar-width:none;
+    
+    scroll-marker-group: after;
+  }
+
+  ul::scroll-marker-group {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-content:center;
+    row-gap:.25em;
+    column-gap:.5em;
+  }
+
+  li::scroll-marker {
+    content: '' / 'naar' attr(data-label);
+    
+    /* styling bolletje */
+    width:1em;
+    aspect-ratio:1;
+    background-color:canvas;
+    border-radius:50%;
+    margin-bottom: 2.5em;
+    transition:.25s;
+  }
+
+  li::scroll-marker:target-current {
+    background: var(--button-color)
+  }
+}
+
 
 /* SECTIE DONKERE ACHTERGROND */
 main section:nth-child(3) {
@@ -100,7 +144,7 @@ main section:nth-child(4) li img:hover {
 }
 
 main section:nth-child(4) li h3 {
-    font-size: 2em;
+    font-size: 1.3em;
 }
 
 /* buttons sectie lichter achtergrond */

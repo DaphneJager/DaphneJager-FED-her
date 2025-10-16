@@ -165,9 +165,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - Ik heb mijn caroussel kunne oplossen
+  - Ik heb veel kunnen leren over het opstellen van de kleuren
 - ...
 
 </details>
@@ -196,17 +195,26 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+ Mijn site ziet er eindelijk uit als een site. Ik moet wel nog mijn code fixen/netjes maken
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Daphne    
+  1. weer probleem met github
+  2. moet ik bepaalde filmpjes toevoegen of is thumbnail genoeg
+  3. hoe krijg ik de scrollbar weg en de puntjes omhoog  
+  | Chiara
+  1. mov exporteren van de site en in code zetten
+  2. carrousel (met mov's)        
+  | Leon
+  1. Het maken van een hamburger menu. (Kan ik daar uitkomen door de les terug te kijken van java script? sinds ik die gemist heb)
+  2. Feedback op goed responsive maken van de website.   
+  | Tobias
+  1. Carousel verbeteren
+  2. hamburger menu is wederom gebroken.        
+
 
 
   ### Verslag van meeting
