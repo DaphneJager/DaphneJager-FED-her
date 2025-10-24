@@ -8,6 +8,7 @@
 }
 
 
+/* Bron: oefenopdracht fontface */
 @font-face {
 	font-family: 'twix';
 	src: url('../font/GoForGoldText.woff') format('woff');
@@ -44,15 +45,22 @@
 
 	--color-text-dark:#490F00;
 	--color-text-light: #ffff;
+	--color-text-black: #000;
+	--color-text-red: #E62B1E;
 	--background-header-dark: #E69D31;
 	--background-header-light: #EFC16D;
 	--background-recipies: #EAAC00;
 	--background-main: #490f00;
 	--background-section: #FFF0EB;
 	--button-color: #E62B1E;
+	--button-color-light: #fff;
+	--footer-color: #E62B1E;
 	
 	--background-darkmode-header: #490F00;
 	--background-darkmode-header2: #6d1a06;
+	--background-recipies-darkmode: #490F00;
+	--background-section-darkmode: #000;
+	--footer-color-darkmode: #490F00;
 
 	--background-header-gradient:
 		linear-gradient(
@@ -72,6 +80,11 @@
 				var(--background-darkmode-header2),
 				var(--background-darkmode-header)
 			);
+		--background-section: var(--background-section-darkmode);
+		--color-text-light: var(--color-text-dark);
+		--color-text-dark: var(--color-text-light);
+		--footer-color: var(--footer-color-darkmode);
+		--background-recipies: var(--background-recipies-darkmode);
 	}
 	
 }
@@ -99,138 +112,232 @@ button:hover {
 	cursor: pointer;	
 }
 
-/*HEADER*/
+
+/* HEADER groot scherm */
+
 header{
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
 	background: var(--background-header-gradient);
-	height: 5em;
+	flex-direction: column;
 }
 
 header img{
-	height: 5.5em;
-	width: 5.5em;
-	margin: 1em;
+	width: 14em;
+	margin: 1.5em;
+	align-self: center;
+	transition: 1s;
+}
+
+header button{
+	visibility: hidden;
+}
+
+header a:hover{
+	color: var(--color-text-red);
 }
 
 
-header nav ul{
+header nav:nth-of-type(2) ul{
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	z-index: 999;
 }
 
-header nav ul li a{
+header nav:nth-of-type(2) ul li a{
 	color: var(--color-text-dark);
 	text-decoration: none;
 	list-style: none;
 }
 
-/* NAV */
+/* BOVENSTE NAV groot scherm */
+nav:nth-of-type(1){
+	justify-content: end;
+	display: flex;
+}
 
-nav {
+nav:nth-of-type(1) img{
+	height: 1.5em;
+	width: 1.5em;
+	order: -1;
+	margin: 0;
+}
+
+nav:nth-of-type(1) ul{
+	display: flex;
+}
+
+nav:nth-of-type(1) ul li{
+	list-style-type: "";
+	padding: .5em;
+}
+
+nav:nth-of-type(1) ul li a{
+	font-size: .8em;
+	text-decoration: none;
+	color: var(--color-text-dark);
+	display: flex;
+	
+}
+
+
+
+/* NAV groot scherm */
+nav:nth-of-type(2){
+	display: flex;
+	overflow: auto;
+}
+
+nav:nth-of-type(2) ul{
+	display: flex;
+	flex-direction: row-reverse
+}
+
+nav:nth-of-type(2) ul li{
+	padding: 1em;
+	align-self: center;
+}
+
+nav:nth-of-type(2) ul li a{
+	font-size: 1em;
+}
+
+
+/* NAV/HEADER KLEIN SCHERM */
+
+@media (width < 1024px) {
+	/*HEADER klein scherm*/
+	header{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		background: var(--background-header-gradient);
+		height: 5em;
+	}
+
+	header img{
+		height: 5.5em;
+		width: 5.5em;
+		margin: 1em;
+	}
+
+
+	header nav ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		z-index: 999;
+	}
+
+	header nav ul li a{
+		color: var(--color-text-dark);
+		text-decoration: none;
+		list-style: none;
+	}
+
+	header button{
+	visibility: visible;
+	} 
+
+	/* NAV klein scherm */
+	nav:nth-of-type(1) ul li{
+		visibility: hidden;
+	}
+	
+
+	nav:nth-of-type(2) {
 	display: flex;
 	justify-content: center;
 	position: relative;
 	flex-direction: column;
-}
+	}
 
-nav ul{
+	nav:nth-of-type(2) ul{
+		display: block;
+		position: fixed;
+		top: 5em;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: var(--background-header-gradient);
+		translate: -100%;
+		transition: 1s
+	}
+
+	nav:nth-of-type(2) ul img{
+		visibility: hidden;
+	}
+
+	nav:nth-of-type(2) ul li{
+		padding: 1em;
+		align-self: start;
+	}
+
+	nav:nth-of-type(2) ul li a{
+		font-size: 2em;
+	}
+
+
+	nav.is-open ul {
+	translate: 0%;
+	transition: 1s;
+	}
+
+	/* nav button bron: Sanne in de les */
+	nav button {
+		z-index: 1;
+		position: relative;
+		top: .15em;
+		right: 1em;
+		appearance: none;
+		font-size: 1em;
+		width: 3em;
+		aspect-ratio: 1;
+		border: none;
+		background: none;
+		display: grid;
+		justify-content: end;
+		align-content: center;
+	}
+
+
+
+	nav button span{
 	display: block;
-	position: fixed;
-	top: 5em;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: linear-gradient(
-			to right,
-			var(--background-header-dark),
-			var(--background-header-light),
-			var(--background-header-dark)
-			);
-	translate: -100%;
-	transition: 1s
+	width: 1.5em;
+	height: .2em;
+	background-color: var(--button-color);
+	border-radius: .1em;
+	grid-column-start: 1;
+	grid-row-start: 1;
+	}
+
+	nav button span:nth-of-type(1){
+	translate: 0 -.5em;
+	}
+
+	nav button span:nth-of-type(3){
+	translate: 0 .5em;
+	}
+
+	nav button.is-open span:nth-of-type(1){
+	translate: 0 0;
+	rotate: 45deg;
+	}
+
+	nav button.is-open span:nth-of-type(2){
+	scale: 0 1;
+	}
+
+	nav button.is-open span:nth-of-type(3){
+	translate: 0 0;
+	rotate: -45deg;
+	}
 }
-
-nav ul li{
-	padding: 1em;
-}
-
-nav ul li a{
-	font-size: 2em;
-}
-
-nav.is-open ul {
-  translate: 0%;
-  transition: 1s;
-}
-
-/* nav button bron: Sanne in de les */
-nav button {
-	z-index: 1;
-	position: relative;
-	top: .15em;
-	right: 1em;
-	appearance: none;
-  	font-size: 1em;
-  	width: 3em;
-  	aspect-ratio: 1;
-  	border: none;
-  	background: none;
-	display: grid;
-	justify-content: end;
-	align-content: center;
-}
-
-
-
-nav button span{
-  display: block;
-  width: 1.5em;
-  height: .2em;
-  background-color: var(--button-color);
-  border-radius: .1em;
-  grid-column-start: 1;
-  grid-row-start: 1;
-}
-
-nav button span:nth-of-type(1){
-  translate: 0 -.5em;
-}
-
-nav button span:nth-of-type(3){
-  translate: 0 .5em;
-}
-
-nav button.is-open span:nth-of-type(1){
-  translate: 0 0;
-  rotate: 45deg;
-}
-
-nav button.is-open span:nth-of-type(2){
-  scale: 0 1;
-}
-
-nav button.is-open span:nth-of-type(3){
-  translate: 0 0;
-  rotate: -45deg;
-}
-
 
 
 /* FOOTER */
-
-/* footer {
-	padding: 1em;
-} */
-
-/* footer li a{
-	color: var(--color-text-light);
-	text-decoration: none;
-	display: flex;
-} */
 
 footer li {
 	margin-top: .5em;
@@ -256,7 +363,8 @@ footer h2 {
 
 /* select region button */
 footer section section:nth-of-type(2) button {
-	background-color: var(--color-text-light);
+	background-color: var(--button-color-light);
+	color: var(--color-text-black);
 	margin: 1em;
 	border: none;
 	width: 90%;
@@ -269,12 +377,7 @@ footer section section:nth-of-type(2) button {
 }
 
 footer > section:nth-of-type(1) {
-	background: linear-gradient(
-			to right,
-			var(--background-header-dark),
-			var(--background-header-light),
-			var(--background-header-dark)
-			);
+	background: var(--background-header-gradient);
 	color: var(--color-text-dark);
 }
 
@@ -294,18 +397,18 @@ footer > section:nth-of-type(1) a:hover {
 }
 
 footer section:nth-of-type(2) {
-	background-color: var(--button-color);
+	background-color: var(--footer-color);
 	color: var(--color-text-light);
 }
 
 footer section:nth-of-type(2) a {
-	background-color: var(--button-color);
+	background-color: var(--footer-color);
 	color: var(--color-text-light);
 	text-decoration: none;
 }
 
 footer section:nth-of-type(3) {
-	background-color: var(--button-color);
+	background-color: var(--footer-color);
 }
 
 /* Lijst socials */

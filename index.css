@@ -27,7 +27,7 @@ main section{
 	background-color: var(--background-section);
 }
 
-/* CAROUSEL 
+/* CAROUSEL bovenaan
 bron: carousel oefening les */
 
 main section:nth-of-type(2) ul {
@@ -36,8 +36,6 @@ main section:nth-of-type(2) ul {
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
 	overscroll-behavior-x: contain;
-	scrollbar-width: thin;
-	scrollbar-color:var(--button-color);
     list-style-type: "";
 }
 
@@ -45,6 +43,7 @@ main section:nth-of-type(2) ul li {
 	flex-basis:100%;
   	flex-shrink: 0;
   	scroll-snap-align: center;
+    height: 20em;
 }
 
 main section:nth-of-type(2) ul li img {
@@ -56,14 +55,14 @@ main section:nth-of-type(2) ul li img {
 /* bolletjes. Brond: lesopdracht caroussel */
 
 @media (width > 10em) {
-  ul {
+  main section:nth-of-type(2) ul {
     /* geen scrollbar */
     scrollbar-width:none;
     
     scroll-marker-group: after;
   }
 
-  ul::scroll-marker-group {
+  main section:nth-of-type(2) ul::scroll-marker-group {
     display: flex;
     flex-wrap:wrap;
     justify-content:center;
@@ -72,19 +71,19 @@ main section:nth-of-type(2) ul li img {
     column-gap:.5em;
   }
 
-  li::scroll-marker {
+  main section:nth-of-type(2) li::scroll-marker {
     content: '' / 'naar' attr(data-label);
     
     /* styling bolletje */
     width:1em;
     aspect-ratio:1;
-    background-color:canvas;
+    background-color:var(--button-color-light);
     border-radius:50%;
     margin-bottom: 2.5em;
     transition:.25s;
   }
 
-  li::scroll-marker:target-current {
+  main section:nth-of-type(2) li::scroll-marker:target-current {
     background: var(--button-color)
   }
 }
@@ -104,6 +103,8 @@ main section:nth-child(3) p {
 main section:nth-child(3) img{
     padding: 3em;
     max-width: 100%;
+    display: flex;
+    justify-self: center;
 }
 
 /* button sectie donkere achtergrond */
@@ -132,7 +133,7 @@ main section:nth-child(4) li {
 }
 
 main section:nth-child(4) li img {
-    width: 80%;
+    max-width: 80%;
     transition: 1s;
     order: -10;
 }
@@ -159,12 +160,40 @@ main section:nth-child(4) li button{
     color: var(--color-text-light);
 }
 
+/* CAROUSEL onderaan */
+main section:nth-of-type(6) ul {
+	display: flex;
+	overflow: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior-x: contain;
+	scrollbar-width: thin;
+	scrollbar-color:var(--button-color);
+    list-style-type: "";
+}
+
+main section:nth-of-type(6) ul li {
+  	flex-shrink: 0;
+  	scroll-snap-align: center;
+}
+
+main section:nth-of-type(6) ul li img {
+	width: 15em;
+    padding: 2em;
+    border-radius: 3em;
+}
 
 
 
 /* FOTO BANNER */
+main section:nth-of-type(5){
+    max-height: 40em;
+}
+
 main section:nth-of-type(5) img {
     width: 100%;
+    object-fit: cover;
+    max-height: 40em;
 }
 
 

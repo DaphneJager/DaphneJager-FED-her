@@ -165,9 +165,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - Ik heb mijn caroussel kunne oplossen
+  - Ik heb mijn caroussel kunnen oplossen
   - Ik heb veel kunnen leren over het opstellen van de kleuren
-- ...
+
 
 </details>
 
@@ -213,16 +213,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   2. Feedback op goed responsive maken van de website.   
   | Tobias
   1. Carousel verbeteren
-  2. hamburger menu is wederom gebroken.        
+  2. hamburger menu is wederom gebroken.    
+  | Anouk
+  1. Hoe ik mijn lege <a> tags een transitie kan geven
+  2. En ook hoe ik een carousel met filmpjes maak    
 
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - Javascript gebruiken voor de knoppen carousel
+  - hele carousel een height geven ipv de foto's. 
+  - ook op de hele carousel een object-fit gebruiken
   - ...
 
 </details>
@@ -266,8 +269,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. Vermeld de bronnen ook in je code.
 
   1. [a11y project, hide content](https://www.a11yproject.com/posts/how-to-hide-content/)
-  2. [bron foto missende twix caramel](https://www.tastysnack.asia/products/twix-caramel-milk-chocolate-cookie-bars-50-7g-36-carton)
-  3. [w3schools](https://www.w3schools.com/)
-  4. 
+  2. [w3schools](https://www.w3schools.com/)
+  3. 
+  4. [oefenopdracht carousel]
+  5. [oefenopdracht hamburgermenu]
+  6. [oefenopdracht fontface]
 
 </details>
