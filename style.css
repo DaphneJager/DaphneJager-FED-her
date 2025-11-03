@@ -27,14 +27,15 @@
 	font-weight: 400;
 }
 
+/* Bron: [a11y project, hide content](https://www.a11yproject.com/posts/how-to-hide-content/)*/
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
+  width: 1px;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  width: 1px;
 }
 
 /*********************/
@@ -117,75 +118,108 @@ button:hover {
 
 header{
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 5em;
 	background: var(--background-header-gradient);
-	flex-direction: column;
 }
 
-header img{
-	width: 14em;
-	margin: 1.5em;
-	align-self: center;
-	transition: 1s;
+header > a img { 
+	height: 5.5em;
+	width: 5.5em;
+	margin: 1em;
 }
 
-header button{
-	visibility: hidden;
-}
-
-header a:hover{
+/* zelf naar kijken */
+header nav ul li a:hover{
 	color: var(--color-text-red);
 }
 
-
-header nav:nth-of-type(2) ul{
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	z-index: 999;
+/* Bron: chatgpt. Prompt: welke filter waarden moet ik gebruiken om de image de kleur #E62B1E te geven  */
+nav ul li a:hover img {
+	filter: brightness(0) saturate(100%) invert(18%) sepia(88%) saturate(7460%) hue-rotate(358deg) brightness(101%) contrast(92%);
+	transition: 0.3s;
 }
 
-header nav:nth-of-type(2) ul li a{
-	color: var(--color-text-dark);
-	text-decoration: none;
-	list-style: none;
-}
 
-/* BOVENSTE NAV groot scherm */
-nav:nth-of-type(1){
+
+/* NAV BUTTON */
+/* nav button bron: Sanne in de les */
+header button {
+	display: grid;
 	justify-content: end;
-	display: flex;
+	align-content: center;
+	position: relative;
+	width: 3em;
+	top: .15em;
+	right: 1em;
+	background: none;
+	z-index: 1;
+	appearance: none;
+	font-size: 1em;
+	aspect-ratio: 1;
+	border: none;	
 }
 
-nav:nth-of-type(1) img{
-	height: 1.5em;
+header button span{
+	display: block;
 	width: 1.5em;
-	order: -1;
-	margin: 0;
+	height: .2em;
+	background-color: var(--button-color);
+	border-radius: .1em;
+	grid-column-start: 1;
+	grid-row-start: 1;
 }
 
-nav:nth-of-type(1) ul{
-	display: flex;
+header button span:nth-of-type(1){
+	translate: 0 -.5em;
 }
 
-nav:nth-of-type(1) ul li{
-	list-style-type: "";
-	padding: .5em;
+header button span:nth-of-type(3){
+	translate: 0 .5em;
 }
 
-nav:nth-of-type(1) ul li a{
-	font-size: .8em;
-	text-decoration: none;
-	color: var(--color-text-dark);
-	display: flex;
-	
+header button.is-open span:nth-of-type(1){
+	translate: 0 0;
+	rotate: 45deg;
 }
+
+header button.is-open span:nth-of-type(2){
+	scale: 0 1;
+}
+
+header button.is-open span:nth-of-type(3){
+	translate: 0 0;
+	rotate: -45deg;
+}
+
+
 
 
 
 /* NAV groot scherm */
-nav:nth-of-type(2){
-	display: flex;
-	overflow: auto;
+header nav:nth-of-type(2){
+	display: block;
+	position: fixed;
+	top: 5em;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: var(--background-header-gradient);
+	translate: -100%;
+	z-index: 999;
+}
+
+header nav:nth-of-type(2).is-open{
+	translate: 0%;
+}
+
+header nav:nth-of-type(2) ul{
+	display:flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 nav:nth-of-type(2) ul{
@@ -194,147 +228,102 @@ nav:nth-of-type(2) ul{
 }
 
 nav:nth-of-type(2) ul li{
+	align-self: flex-start;
 	padding: 1em;
-	align-self: center;
 }
 
 nav:nth-of-type(2) ul li a{
 	font-size: 1em;
+	color: var(--color-text-dark);
+	text-decoration: none;
+	list-style: none;
 }
+
+
+
+
+
+
+
+
 
 
 /* NAV/HEADER KLEIN SCHERM */
 
-@media (width < 1024px) {
+@media (width > 1024px) {
+
+
 	/*HEADER klein scherm*/
 	header{
+		justify-content: start;
+		height: unset;
+	}
+
+	header > a img {
+		width: 14em;
+		margin: 1.5em;
+	}
+
+
+	/* NAV BUTTON bron: Sanne in de les */
+	header button {
+		display: none;
+	}
+
+	
+	/* BOVENSTE NAV groot scherm */
+	nav:nth-of-type(1){
 		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		background: var(--background-header-gradient);
-		height: 5em;
+		justify-content: end;
+		position: absolute;
+		right: .5em;
+		top: .5em;
 	}
 
-	header img{
-		height: 5.5em;
-		width: 5.5em;
-		margin: 1em;
-	}
-
-
-	header nav ul{
-		list-style: none;
+	nav:nth-of-type(1) img{
+		height: 1.5em;
+		width: 1.5em;
 		margin: 0;
-		padding: 0;
-		z-index: 999;
+		order: -1;
+	}
+
+	nav:nth-of-type(1) ul{
+		display: flex;
+	}
+
+	nav:nth-of-type(1) ul li{
+		padding: .5em;
+		list-style-type: "";
+	}
+
+	nav:nth-of-type(1) ul li a{
+		display: flex;
+		color: var(--color-text-dark);
+		font-size: .8em;
+		text-decoration: none;
+	}
+
+
+	/* grote nav */
+	header nav:nth-of-type(2){
+		position: static;
+		translate: 0;
+		background: none;
+	}
+
+	header nav:nth-of-type(2) ul {
+		flex-direction: row;
 	}
 
 	header nav ul li a{
 		color: var(--color-text-dark);
 		text-decoration: none;
-		list-style: none;
-	}
-
-	header button{
-	visibility: visible;
-	} 
-
-	/* NAV klein scherm */
-	nav:nth-of-type(1) ul li{
-		visibility: hidden;
-	}
-	
-
-	nav:nth-of-type(2) {
-	display: flex;
-	justify-content: center;
-	position: relative;
-	flex-direction: column;
-	}
-
-	nav:nth-of-type(2) ul{
-		display: block;
-		position: fixed;
-		top: 5em;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background: var(--background-header-gradient);
-		translate: -100%;
-		transition: 1s
-	}
-
-	nav:nth-of-type(2) ul img{
-		visibility: hidden;
-	}
-
-	nav:nth-of-type(2) ul li{
-		padding: 1em;
-		align-self: start;
-	}
-
-	nav:nth-of-type(2) ul li a{
-		font-size: 2em;
-	}
-
-
-	nav.is-open ul {
-	translate: 0%;
-	transition: 1s;
-	}
-
-	/* nav button bron: Sanne in de les */
-	nav button {
-		z-index: 1;
-		position: relative;
-		top: .15em;
-		right: 1em;
-		appearance: none;
-		font-size: 1em;
-		width: 3em;
-		aspect-ratio: 1;
-		border: none;
-		background: none;
-		display: grid;
-		justify-content: end;
-		align-content: center;
-	}
-
-
-
-	nav button span{
-	display: block;
-	width: 1.5em;
-	height: .2em;
-	background-color: var(--button-color);
-	border-radius: .1em;
-	grid-column-start: 1;
-	grid-row-start: 1;
-	}
-
-	nav button span:nth-of-type(1){
-	translate: 0 -.5em;
-	}
-
-	nav button span:nth-of-type(3){
-	translate: 0 .5em;
-	}
-
-	nav button.is-open span:nth-of-type(1){
-	translate: 0 0;
-	rotate: 45deg;
-	}
-
-	nav button.is-open span:nth-of-type(2){
-	scale: 0 1;
-	}
-
-	nav button.is-open span:nth-of-type(3){
-	translate: 0 0;
-	rotate: -45deg;
-	}
+		list-style-type: none;
+	}	
 }
+
+
+
 
 
 /* FOOTER */
@@ -363,28 +352,28 @@ footer h2 {
 
 /* select region button */
 footer section section:nth-of-type(2) button {
+	width: 90%;
+	height: 4em;
+	padding-left: 1.2em;
 	background-color: var(--button-color-light);
 	color: var(--color-text-black);
 	margin: 1em;
 	border: none;
-	width: 90%;
-	height: 4em;
 	border-radius: .5em;
 	text-align: left;
-	padding-left: 1.2em;
 	font-weight: 100;
 	font-size: 1em;
 }
 
 footer > section:nth-of-type(1) {
-	background: var(--background-header-gradient);
 	color: var(--color-text-dark);
+	background: var(--background-header-gradient);
 }
 
 footer > section:nth-of-type(1) a {
+	padding: 0 1em 1em 0;
 	color: var(--color-text-dark);
 	text-decoration: none;
-	padding: 0 1em 1em 0;
 }
 
 footer > section:nth-of-type(1) li {
@@ -397,13 +386,13 @@ footer > section:nth-of-type(1) a:hover {
 }
 
 footer section:nth-of-type(2) {
-	background-color: var(--footer-color);
 	color: var(--color-text-light);
+	background-color: var(--footer-color);
 }
 
 footer section:nth-of-type(2) a {
-	background-color: var(--footer-color);
 	color: var(--color-text-light);
+	background-color: var(--footer-color);
 	text-decoration: none;
 }
 
@@ -427,22 +416,22 @@ footer section section:nth-of-type(2) li a {
 }
 
 footer section section:nth-of-type(2) ul {
-	font-weight: 100;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	font-weight: 100;
 }
 
 
 /* Button onderaan */
 
 footer section section:nth-of-type(3) button {
-	background-color: var(--button-color);
-	margin: 1em;
-	border: solid .2em;
-	border-color: var(--color-text-light);
 	height: 4em;
 	padding: .8em 2.5em .8em 2.5em;
+	margin: 1em;
+	color: var(--color-text-light);
+	background-color: var(--button-color);
+	border: solid .2em;
+	border-color: var(--color-text-light);
 	border-radius: .5em;
 	font-size: 1em;
-	color: var(--color-text-light);
 }

@@ -27,23 +27,28 @@ main section{
 	background-color: var(--background-section);
 }
 
+
+
+
+
 /* CAROUSEL bovenaan
 bron: carousel oefening les */
 
 main section:nth-of-type(2) ul {
 	display: flex;
-	overflow: auto;
+    list-style-type: "";
+    overflow-x: auto;
+    overflow-y: hidden;
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
 	overscroll-behavior-x: contain;
-    list-style-type: "";
 }
 
 main section:nth-of-type(2) ul li {
-	flex-basis:100%;
+	height: 20em;
+    flex-basis:100%;
   	flex-shrink: 0;
   	scroll-snap-align: center;
-    height: 20em;
 }
 
 main section:nth-of-type(2) ul li img {
@@ -76,17 +81,59 @@ main section:nth-of-type(2) ul li img {
     
     /* styling bolletje */
     width:1em;
-    aspect-ratio:1;
+    margin-bottom: 2.5em;
     background-color:var(--button-color-light);
     border-radius:50%;
-    margin-bottom: 2.5em;
     transition:.25s;
+    aspect-ratio:1;
   }
 
   main section:nth-of-type(2) li::scroll-marker:target-current {
     background: var(--button-color)
   }
 }
+
+/* previous/next buttons Brond: lesopdracht caroussel*/
+
+main section:nth-of-type(2) ul{
+    &::scroll-button(*) {
+    /* styling buttons */
+    width:3em;
+    aspect-ratio:1;
+    margin:1em 0 0;
+    padding:0;
+    color: var(--button-color);
+    background-color: var(--button-color-light);
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:1em;
+    
+    /* Buttons positie */
+    position: absolute;
+    top: 25%;
+    }
+
+    &::scroll-button(right) {
+    content: '→' / 'Next';
+    right:clamp(1.5rem, 5vw, 2rem);
+    }
+
+    &::scroll-button(left) {
+    content: '←' / 'Previous';
+    left:clamp(1.5rem, 5vw, 2rem);
+    }
+    
+    &::scroll-button(*):disabled {
+    opacity:.5;
+    }
+}
+
+
+
+
+
+
 
 
 /* SECTIE DONKERE ACHTERGROND */
@@ -101,21 +148,21 @@ main section:nth-child(3) p {
 }
 
 main section:nth-child(3) img{
-    padding: 3em;
-    max-width: 100%;
     display: flex;
     justify-self: center;
+    padding: 3em;
+    max-width: 100%;
 }
 
 /* button sectie donkere achtergrond */
 main section:nth-child(3) button{
-	background-color: var(--button-color);
-	border: none;
-	padding: 1em 1.5em 1em 1.5em;
-	border-radius: .5em;
-    width: 10em;
+	width: 10em;
     margin: 2em;
+    padding: 1em 1.5em 1em 1.5em;
     color: var(--color-text-light);
+    background-color: var(--button-color);
+	border: none;
+	border-radius: .5em;
 }
 
 /* SECTIE LICHTE ACHTERGROND */
@@ -151,25 +198,25 @@ main section:nth-child(4) li h3 {
 /* buttons sectie lichter achtergrond */
 
 main section:nth-child(4) li button{
-	background-color: var(--button-color);
-	border: none;
-	padding: 1em 1.5em 1em 1.5em;
-	border-radius: .5em;
-    width: 10em;
+	width: 10em;
     margin: 2em;
+    padding: 1em 1.5em 1em 1.5em;
     color: var(--color-text-light);
+    background-color: var(--button-color);
+    border: none;
+	border-radius: .5em;
 }
 
 /* CAROUSEL onderaan */
 main section:nth-of-type(6) ul {
 	display: flex;
+    justify-content: space-around;
+    list-style-type: "";
 	overflow: auto;
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
 	overscroll-behavior-x: contain;
-	scrollbar-width: thin;
-	scrollbar-color:var(--button-color);
-    list-style-type: "";
+	scrollbar-width: none;
 }
 
 main section:nth-of-type(6) ul li {
@@ -183,6 +230,45 @@ main section:nth-of-type(6) ul li img {
     border-radius: 3em;
 }
 
+/* carousel knoppen */
+main section:last-of-type ul{
+    &::scroll-button(*) {
+    /* styling buttons */
+    width: 3em;
+    aspect-ratio: 1;
+    margin: 1em 0 0 26vw;
+    padding: 0;
+    color: var(--button-color);
+    background-color: var(--button-color-light);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1em;
+    }
+
+    &::scroll-button(right) {
+    content: '→' / 'Next';
+    right:clamp(1.5rem, 5vw, 2rem);
+    }
+
+    &::scroll-button(left) {
+    content: '←' / 'Previous';
+    left:clamp(1.5rem, 5vw, 2rem);
+    }
+    
+    &::scroll-button(*):disabled {
+    opacity:.5;
+    }
+}
+
+@media (width > 731px) {
+  main section:last-of-type ul {
+    &::scroll-button(*) {
+      display: none;
+    }
+  }
+}
+
 
 
 /* FOTO BANNER */
@@ -192,8 +278,8 @@ main section:nth-of-type(5){
 
 main section:nth-of-type(5) img {
     width: 100%;
-    object-fit: cover;
     max-height: 40em;
+    object-fit: cover;
 }
 
 

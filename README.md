@@ -270,9 +270,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   1. [a11y project, hide content](https://www.a11yproject.com/posts/how-to-hide-content/)
   2. [w3schools](https://www.w3schools.com/)
-  3. 
+  3. [chatgpt] Prompt: welke filter waarden moet ik gebruiken om de image de kleur #E62B1E te geven 
   4. [oefenopdracht carousel]
   5. [oefenopdracht hamburgermenu]
   6. [oefenopdracht fontface]
+  7. [SANNE]
 
 </details>

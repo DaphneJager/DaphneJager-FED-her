@@ -10,21 +10,19 @@ main {
 }
 
 main h1 {
-    font-size: 1em;
     grid-row-start: 1;
     grid-column-start: 1;
     justify-self: center;
     padding-top: 2em;
+    font-size: 1em;
 }
 
 main section:first-of-type h2 {
-    
-    text-align: center;
     grid-row-start: 2;
     grid-column-start: 1;
     justify-self: center;
     padding-top: 1em;
-    
+    text-align: center;
 }
 
 main section:first-of-type p {
@@ -35,90 +33,89 @@ main section:first-of-type p {
 }
 
 main section:first-of-type {
-    background-color: var(--background-recipies);
     display: grid;
     grid-template-rows: min-content 1fr max-content;
     color: var(--color-text-dark);
+    background-color: var(--background-recipies);
 }
 
 
 main section:first-of-type img {
-    order: -10;
-    min-width: 100%;
     height: auto;
+    min-width: 100%;
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 1;
+    order: -10;
 }
 
 /* Recept dingen */
 main section:nth-of-type(2) {
-    color: var(--color-text-dark);
     display: grid;
     justify-content: center;
+    color: var(--color-text-dark);
 }
 
 main section:nth-of-type(2) h2 {
+    padding: 1em;
     color: var(--color-text-dark);
     text-align: center;
-    padding: 1em;
 }
 
 main section:nth-of-type(2) button {
-    background: var(--button-color);
-    color: var(--color-text-light);
-    border: none;
     padding: 1em;
+    color: var(--color-text-light);
+    background: var(--button-color);
+    border: none;
     border-radius: .5em;
 }
 
 main section:nth-of-type(2) > button {
-    background: var(--button-color);
-    color: var(--color-text-light);
-    border: none;
+    justify-self: center;
+    width: 35%;
     padding: 1em;
     margin: 0 1em 2em 1em;
+    color: var(--color-text-light);
+    background: var(--button-color);
+    border: none;
     border-radius: .5em;
-    width: 35%;
-    justify-self: center;
-
 }
 
 
 article {
-    text-align: left;
     display: grid;
     grid-template-rows: max-content max-content 5em max-content;
     grid-template-columns: 1fr 1fr;
     align-content: center;
-    background: var(--background-header-gradient);
-    margin: 2em;
-    border-radius: .5em;
-    color: var(--color-text-dark);
     width: 20em;
+    margin: 2em;
+    color: var(--color-text-dark);
+    background: var(--background-header-gradient);
+    border-radius: .5em;
+    text-align: left;
 }
 
 article img {
-    border-radius: .5em .5em 0 0;
     grid-row-start: 1;
     grid-column-start: 1;
     grid-column-end: 3;
     width: 100%;
+    border-radius: .5em .5em 0 0;
 }
 
 article h2 {
-    align-self: left;
     grid-row-start: 2;
     grid-column-start: 1;
     grid-column-end: 3;
+    align-self: left;
     padding: 1em 1em 0 1em;
 }
 
 article table {
-    align-self: center;
     grid-row-start: 3;
     grid-column-start: 1;
     grid-column-end: 3;
+    align-self: center;
     margin: 2em;
 }
 
@@ -128,8 +125,8 @@ article button {
 }
 
 article button:hover {
-    background: var(--color-text-light);
     color: var(--button-color);
+    background: var(--color-text-light);
 }
 
 th {
