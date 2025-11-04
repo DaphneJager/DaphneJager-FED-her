@@ -332,6 +332,7 @@ footer li {
 	margin-top: .5em;
 	padding: 1em;
 	list-style-type: none;
+	text-decoration: underline;
 }
 
 footer p{
