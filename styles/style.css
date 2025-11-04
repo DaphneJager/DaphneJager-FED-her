@@ -7,7 +7,6 @@
   padding: 0;
 }
 
-
 /* Bron: oefenopdracht fontface */
 @font-face {
 	font-family: 'twix';
@@ -27,6 +26,8 @@
 	font-weight: 400;
 }
 
+
+
 /* Bron: [a11y project, hide content](https://www.a11yproject.com/posts/how-to-hide-content/)*/
 .visually-hidden {
   clip: rect(0 0 0 0);
@@ -36,6 +37,18 @@
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
+}
+
+/* PREFERS REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation: none !important;
+		transition: none !important;
+		scroll-behavior: auto !important;
+		transform: none !important;
+	}
 }
 
 /*********************/
@@ -56,6 +69,11 @@
 	--button-color: #E62B1E;
 	--button-color-light: #fff;
 	--footer-color: #E62B1E;
+	--selection-color: #9f2060;
+	--selection-color-text: #75a0eb;
+	--stroke-color: #fff;
+	--stroke-color-darkmode: #490f00; 
+	
 	
 	--background-darkmode-header: #490F00;
 	--background-darkmode-header2: #6d1a06;
@@ -86,8 +104,8 @@
 		--color-text-dark: var(--color-text-light);
 		--footer-color: var(--footer-color-darkmode);
 		--background-recipies: var(--background-recipies-darkmode);
+		--stroke-color: var(--stroke-color-darkmode);
 	}
-	
 }
 
 /****************/
@@ -113,6 +131,22 @@ button:hover {
 	cursor: pointer;	
 }
 
+/* SELECTION COLORS en FOCUS STATE bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::selection*/
+h1::selection,
+h2::selection, 
+h3::selection, 
+p::selection,
+a::selection {
+  color: var(--selection-color-text);
+  background-color: var(--selection-color);
+}
+
+a:focus-visible, 
+button:focus-visible {
+	border: solid 3px var(--button-color-light);
+	outline: none;
+	box-shadow: 0 0 0 5px var(--selection-color);
+}
 
 /* HEADER groot scherm */
 
@@ -240,10 +274,26 @@ nav:nth-of-type(2) ul li a{
 }
 
 
+/* SKIP CONTENT LINK bron: https://www.w3schools.com/accessibility/accessibility_skip_links.php */
+header > a:first-of-type {
+	left: 50%;
+	position: absolute;
+	transform: translateY(-100%);
+}
 
 
+header > a:first-of-type {
+	height: 30px;
+	left: 50%;
+	padding: 8px;
+	position: absolute;
+	transform: translateY(-1000%);
+	transition: 0.3s;
+}
 
-
+header > a:first-of-type:focus {
+	transform: translateY(0%);
+}
 
 
 
