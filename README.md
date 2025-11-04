@@ -65,9 +65,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   geen H3, die wordt dus over geslagen.
   Er staat text in plaatjes, in plaats van text op plaatjes. hierdoor kan de screenreader
   de text op de foto niet lezen.
-  <img src="../basiswebsite/readme-images/headings.HEIC" width="375px" alt="headings">
-  <img src="../basiswebsite/readme-images/links.1.HEIC" width="375px" alt="links">
-  <img src="../basiswebsite/readme-images/links.2.HEIC" width="375px" alt="links">
+  <img src="../basiswebsite/readme-images/headings.jpg" width="375px" alt="headings">
+  <img src="../basiswebsite/readme-images/links1.jpg" width="375px" alt="links">
+  <img src="../basiswebsite/readme-images/links2.jpg" width="375px" alt="links">
 
 </details>
 
@@ -79,10 +79,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="../basiswebsite/readme-images/breakdown.p1.png" width="375px" alt="breakdown van de hele pagina">
+  <img src="../basiswebsite/readme-images/breakdown_p1.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="../basiswebsite/readme-images/breakdown.p2.png" width="375px" alt="pagina 2">
+  <img src="../basiswebsite/readme-images/breakdown_p2.png_" width="375px" alt="pagina 2">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
   <img src="../basiswebsite/readme-images/breakdown.mn.png" width="375px" alt="breakdown van een dynamisch deel">
@@ -181,8 +181,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
-
+  grootste bevindingen:
+  - ze hadden slechte of soms zelfs geen alt text. dat heb ik beter gedaan.
+  - bepaalde text was niet leesbaar op foto's. ik heb dit verbeterd.
+  - hun code had veel errors. mijne heeft er geen.
+  - ik heb duidelijke selection colors en focus states toegevoegd.
+  - de headings liepen niet op goede volgorde, en werden soms overgeslagen. ik heb dit op de goede manier gedaan.
+  meer bevindingen te lesen op mijn checklist 
+  
+  <img src="/readme-images/wcag1.jpg" width="375px" alt="wcag p1">
+  <img src="/readme-images/wcag2.jpg" width="375px" alt="wcag p2">
+  <img src="/readme-images/wcag3.jpg" width="375px" alt="wcag p3">
+  <img src="/readme-images/wcag4.jpg" width="375px" alt="wcag p4">
+  <img src="/readme-images/wcag5.jpg" width="375px" alt="wcag p5">
+  
 </details>
 
 
@@ -240,19 +252,27 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/eindproduct_ss1.png" width="375px" alt="uitomst 1">
+  <img src="readme-images/eindproduct_ss2.png" width="375px" alt="uitomst 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Ik heb veel geleerd over css.
+  ik heb zelfs een klein beetje geleerd om het leuk te vinden.
+  Ik heb goed geexperimenteerd.
+  Ik heb meer geleerd over mediaqueries
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+
+  <img src="readme-images/mediaqss1.png" width="375px" alt="">
+  <img src="readme-images/mediaqss2.png" width="375px" alt="">
+  <img src="readme-images/mediaqss3.png" width="375px" alt="">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Javascript blijft lastig voor mij
+  Ik moet beter worden in mijn code opruimen
+  
+  
 </details>
 
 
@@ -269,11 +289,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. Vermeld de bronnen ook in je code.
 
   1. [a11y project, hide content](https://www.a11yproject.com/posts/how-to-hide-content/)
-  2. [w3schools](https://www.w3schools.com/)
+  2. [w3schools, tabellen](https://www.w3schools.com/)
   3. [chatgpt] Prompt: welke filter waarden moet ik gebruiken om de image de kleur #E62B1E te geven 
   4. [oefenopdracht carousel]
   5. [oefenopdracht hamburgermenu]
   6. [oefenopdracht fontface]
   7. [SANNE]
+  8. [W3schools, skip link maken] (https://www.w3schools.com/accessibility/accessibility_skip_links.php)
+  9. [Selection colors] (https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::selection)
 
 </details>
