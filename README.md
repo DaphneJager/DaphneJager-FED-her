@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   blauw
 
   #### Je focus:
-  surface plane??
+  surface plane
  
 </details>
 
@@ -40,11 +40,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Home page 
-  <img src="../basiswebsite/readme-images/homepagefull.png" width="375px" alt="homepage screenshot">
+  <img src="/readme-images/homepagefull.png" width="375px" alt="homepage screenshot">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   sustainable page 
-  <img src="../basiswebsite/readme-images/recipiesfull.png" width="375px" alt="recipies screenshot">
+  <img src="/readme-images/recipiesfull.png" width="375px" alt="recipies screenshot">
  
 </details>
 
@@ -65,9 +65,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   geen H3, die wordt dus over geslagen.
   Er staat text in plaatjes, in plaats van text op plaatjes. hierdoor kan de screenreader
   de text op de foto niet lezen.
-  <img src="../basiswebsite/readme-images/headings.jpg" width="375px" alt="headings">
-  <img src="../basiswebsite/readme-images/links1.jpg" width="375px" alt="links">
-  <img src="../basiswebsite/readme-images/links2.jpg" width="375px" alt="links">
+  <img src="/readme-images/headings.jpg" width="375px" alt="headings">
+  <img src="/readme-images/links1.jpg" width="375px" alt="links">
+  <img src="/readme-images/links2.jpg" width="375px" alt="links">
 
 </details>
 
@@ -79,13 +79,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="../basiswebsite/readme-images/breakdown_p1.png" width="375px" alt="breakdown van de hele pagina">
+  <img src="/readme-images/breakdown_p1.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="../basiswebsite/readme-images/breakdown_p2.png_" width="375px" alt="pagina 2">
+  <img src="/readme-images/breakdown_p2.png_" width="375px" alt="pagina 2">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="../basiswebsite/readme-images/breakdown.mn.png" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="/readme-images/breakdown_menu.png" width="375px" alt="breakdown van een dynamisch deel">
 
 </details>
 
