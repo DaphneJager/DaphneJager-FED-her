@@ -2,8 +2,9 @@
 /* CSS REMEDY */
 /**************/
 
-
+/********/
 /* MAIN */
+/********/
 
 main {
     background-color: var(--background-section);
@@ -19,6 +20,12 @@ main h1 {
     -webkit-text-stroke-color: var(--stroke-color);
 }
 
+main section:first-of-type {
+    display: grid;
+    grid-template-rows: min-content 1fr max-content;
+    color: var(--color-text-dark);
+    background-color: var(--background-recipies);
+}
 
 main section:first-of-type h2 {
     grid-row-start: 2;
@@ -37,14 +44,6 @@ main section:first-of-type p {
     padding: 1em;
 }
 
-main section:first-of-type {
-    display: grid;
-    grid-template-rows: min-content 1fr max-content;
-    color: var(--color-text-dark);
-    background-color: var(--background-recipies);
-}
-
-
 main section:first-of-type img {
     height: auto;
     min-width: 100%;
@@ -54,7 +53,10 @@ main section:first-of-type img {
     order: -10;
 }
 
-/* Recept dingen */
+/*******************/
+/* Recept articles */
+/*******************/
+
 main section:nth-of-type(2) {
     display: grid;
     justify-content: center;
@@ -80,13 +82,9 @@ main section:nth-of-type(2) > button {
     width: 35%;
     padding: 1em;
     margin: 0 1em 2em 1em;
-    color: var(--color-text-light);
-    background: var(--button-color);
-    border: none;
-    border-radius: .5em;
 }
 
-
+/* articles */
 article {
     display: grid;
     grid-template-rows: max-content max-content 5em max-content;
@@ -127,11 +125,6 @@ article table {
 article button {
     grid-row-start: 4;
     margin: 2em;
-}
-
-article button:hover {
-    color: var(--button-color);
-    background: var(--color-text-light);
 }
 
 th {
