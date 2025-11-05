@@ -15,7 +15,10 @@ main h1 {
     justify-self: center;
     padding-top: 2em;
     font-size: 1em;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--stroke-color);
 }
+
 
 main section:first-of-type h2 {
     grid-row-start: 2;
@@ -23,6 +26,8 @@ main section:first-of-type h2 {
     justify-self: center;
     padding-top: 1em;
     text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--stroke-color);
 }
 
 main section:first-of-type p {
